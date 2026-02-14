@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analytics</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h1>Analytics</h1>
+<canvas id="statusChart" width="400" height="200"></canvas>
+<a href="index.html">Back to Applications</a>
+<script src="script.js"></script>
+<script>
+function renderChart() {
+    const apps = JSON.parse(localStorage.getItem('applications') || '[]');
+    const statusCounts = {};
+    apps.forEach(a => statusCounts[a.status] = (statusCounts[a.status] || 0) + 1);
+
+    const ctx = document.getElementById('statusChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: Object.keys(statusCounts),
+            datasets: [{
+                label: 'Applications by Status',
+                data: Object.values(statusCounts),
+                backgroundColor: 'skyblue'
+            }]
+        }
+    });
+}
+renderChart();
+</script>
+</body>
+</html>

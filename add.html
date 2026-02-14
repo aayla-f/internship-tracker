@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Add Application</h1>
+<form id="appForm">
+    Company: <input type="text" id="company" required><br>
+    Role: <input type="text" id="role" required><br>
+    Date Applied: <input type="date" id="dateApplied" required><br>
+    Status:
+    <select id="status">
+        <option>Applied</option>
+        <option>Interview</option>
+        <option>Offer</option>
+        <option>Rejected</option>
+    </select><br>
+    <input type="submit" value="Add">
+</form>
+<a href="index.html">Back to Applications</a>
+
+<script src="script.js"></script>
+<script>
+document.getElementById('appForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    addApplication();
+});
+</script>
+</body>
+</html>

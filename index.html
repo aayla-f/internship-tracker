@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Applications</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Internship Applications</h1>
+<a href="add.html">Add Application</a> 
+<a href="analytics.html">Analytics</a>
+
+<div class="table-container">
+    <table id="appTable">
+        <tr>
+            <th>Company</th>
+            <th>Role</th>
+            <th>Date Applied</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+</div>
+
+
+<script src="script.js"></script>
+<script>
+function loadApplications() {
+    const apps = JSON.parse(localStorage.getItem('applications') || '[]');
+    const table = document.getElementById('appTable');
+
+    // Remove old rows except header
+    while(table.rows.length > 1) table.deleteRow(1);
+
+    apps.forEach((app, i) => {
+        const row = table.insertRow();
+        row.insertCell(0).innerText = app.company;
+        row.insertCell(1).innerText = app.role;
+        row.insertCell(2).innerText = app.dateApplied;
+        row.insertCell(3).innerText = app.status;
+        const actions = row.insertCell(4);
+        actions.innerHTML = `<a href="#" onclick="editApp(${i})">Edit</a> | <a href="#" onclick="deleteApp(${i})">Delete</a>`;
+    });
+}
+loadApplications();
+</script>
+</body>
+</html>
