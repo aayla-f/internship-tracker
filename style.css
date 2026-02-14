@@ -1,4 +1,4 @@
-/* === Dark Theme Body === */
+/*  Dark Theme Body */
 html, body {
     height: 100%; /* make the body take full viewport height */
     margin: 0;
@@ -9,7 +9,7 @@ html, body {
     flex-direction: column;
 }
 
-/* === Main Content Container === */
+/* Main Content Container */
 main {
     flex: 1; /* take up remaining space */
     display: flex;
@@ -17,7 +17,7 @@ main {
     padding: 20px;
 }
 
-/* === Links === */
+
 a {
     color: #90caf9;
     text-decoration: none;
@@ -28,18 +28,18 @@ a:hover {
     color: rgb(33, 211, 255);
 }
 
-/* === Headings === */
+
 h1, h2 {
     color: #ffffff;
 }
 
-/* === Table Container === */
+
 .table-container {
     flex: 1; /* expand to fill page */
     overflow-y: auto; /* scroll only if table exceeds container */
 }
 
-/* === Table Styling === */
+
 table {
     margin-top: 20px;
     width: 100%;
@@ -65,7 +65,6 @@ tr:nth-child(even) {
     background-color: #1a1a1a;
 }
 
-/* === Forms === */
 form {
     background-color: #1e1e1e;
     padding: 20px;
@@ -101,7 +100,7 @@ input[type="submit"]:hover {
     background-color: #64b5f6;
 }
 
-/* === Canvas Charts === */
+/* Canvas Charts */
 canvas {
     max-width: 100%;
     background-color: #1e1e1e;
@@ -109,3 +108,4 @@ canvas {
     border-radius: 8px;
     margin-top: 20px;
 }
+
