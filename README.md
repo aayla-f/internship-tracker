@@ -20,11 +20,11 @@ The project runs fully in the browser.
 
 This project contains five main files:
 
-index.html – Shows the list of applications
-add.html – Form to add or edit applications
-analytics.html – Displays charts and analytics
-script.js – Handles data and logic
-style.css - Styling
+1. index.html – Shows the list of applications
+2. add.html – Form to add or edit applications
+3. analytics.html – Displays charts and analytics
+4. script.js – Handles data and logic
+5. style.css - Styling
 
 ## How to Run
 
@@ -34,11 +34,11 @@ style.css - Styling
 
 ## Features
 
-Add internship applications
-Edit existing applications
-Delete applications
-View status analytics
-Save data using localStorage
+1. Add internship applications
+2. Edit existing applications
+3. Delete applications
+4. View status analytics
+5. Save data using localStorage
 
 ## Future Improvements
 1. Add search and filters
@@ -48,4 +48,5 @@ Save data using localStorage
 5. Improve mobile layout
 
 ## Author
+
 Created by me, Aayla F, as a learning project to understand JS, HTML, and CSS.
